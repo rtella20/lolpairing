@@ -7,6 +7,11 @@ body{
   width: 300px;
 }
 
+.text-center{
+  margin: 0 auto;
+  width: 500px;
+}
+
 .glyphicon {
   margin: auto;
   text-align: center;

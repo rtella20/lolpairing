@@ -47,11 +47,17 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/backbone-min.js"></script>
     <script type="text/javascript">
-      var clock = $('.clock').FlipClock({
-          countdown: true
+      $(document).ready(function(){
+        var random_background = 1 + Math.floor(Math.random() * 5);
+        $('body').css("background","#fff url('img/background/"+random_background+".jpg') no-repeat top left");
+        $('body').css("background-size", 'cover');
+        var clock = $('.clock').FlipClock({
+            countdown: true,
+            clockFace: 'MinuteCounter'
+        });
+        clock.setTime(900);
+        clock.start();
       });
-      clock.setTime(900);
-      clock.start();
     </script>
     <script src="js/application.js"></script>
 

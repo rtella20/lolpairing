@@ -7,6 +7,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/flipclock.css">
+    <link rel="stylesheet" href="css/application.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -16,8 +17,14 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Fun Pairing Timer!</h1>
-    <div class="your-clock"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="clock"></div>
+        </div>
+      </div>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -26,9 +33,11 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/backbone-min.js"></script>
     <script type="text/javascript">
-      var clock = $('.your-clock').FlipClock({
-          // ... your options here
+      var clock = $('.clock').FlipClock({
+          countdown: true
       });
+      clock.setTime(900);
+      clock.start();
     </script>
 
 

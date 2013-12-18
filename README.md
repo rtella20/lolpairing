@@ -1,0 +1,4 @@
+lolpairing
+==========
+
+Pair Programming Timer

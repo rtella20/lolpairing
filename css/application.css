@@ -2,3 +2,14 @@
   margin: 0 auto;
   width: 500px;
 }
+
+.glyphicon {
+  margin: auto;
+  text-align: center;
+  font-size: 65pt;
+  display: block;
+}
+
+a:hover > .glyphicon {
+  text-decoration: none;
+}

@@ -23,7 +23,3 @@ a, a:hover{
   color:white;
   text-decoration:none;
 }
-
-a:hover > .glyphicon {
-  text-decoration: none;
-}

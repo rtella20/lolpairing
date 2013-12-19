@@ -26,17 +26,15 @@
       </div>
 	  <br/>
       <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-          <a href="#"><span class="glyphicon glyphicon-repeat"></span>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <a href="#" id="reset">
+            <span class="glyphicon glyphicon-repeat"></span>
           </a>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-          <a href="#">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <a href="#" id="play_pause">
             <span class="glyphicon glyphicon-play"></span>
           </a>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-          <span class="glyphicon glyphicon-pause"></span>
         </div>
       </div>
     </div>
@@ -58,20 +56,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/backbone-min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        var random_background = 1 + Math.floor(Math.random() * 5);
-        $('body').css("background","#fff url('img/background/"+random_background+".jpg') no-repeat top left");
-        $('body').css("background-size", 'cover');
-        var clock = $('.clock').FlipClock({
-            countdown: true,
-            clockFace: 'MinuteCounter'
-        });
-        clock.setTime(900);
-        clock.start();
-      });
-    </script>
     <script src="js/application.js"></script>
-
   </body>
 </html>

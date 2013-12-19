@@ -8,10 +8,13 @@ function init () {
 
   var custom_callbacks = new Object();
   custom_callbacks.interval = function() {
-    if (clock.getTime() < 890) {
-      //alert('test');
-      document.title = 'CHANGE PAIRS';
-      document.title = 'CHANGE PAIRS!';
+    if (clock.getTime() < 895) {
+      titleTimer=window.setInterval(function() {
+        document.title = document.title == "Timer" ? "STOP PAIRING" : "Timer";
+      }, 1500);
+      alertTime=window.setInterval(function() {
+        alert('STOP PAIRING');
+      }, 2500);
       $('body').css("background","#fff url('img/background/hypnotoad.png') no-repeat top left");
     }
   }

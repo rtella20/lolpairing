@@ -23,3 +23,7 @@ a, a:hover{
   color:white;
   text-decoration:none;
 }
+
+span.flip-clock-label  {
+  display: none;
+}

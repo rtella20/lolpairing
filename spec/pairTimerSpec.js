@@ -43,14 +43,14 @@ describe("PairTimer", function() {
     },0);
   });
 
-  it("should be able tio know the clock's time", function() {
+  it("should be able to know the clock's time", function() {
     timer.setStartTime(30);
-    expect(timer.getRemainingTime()).toEqual(30);
+    expect(timer.getRemainingSeconds()).toEqual(30);
   });
 
-  // it("should be able to reset itself", function() {
-  //   timer.clock.setTime(1);
-  //   timer.reset();
-  //   expect(timer.clock.getTime()).toEqual('900');
-  // });
+  it("should be able to reset itself", function() {
+    timer.clock.setTime(1);
+    timer.reset();
+    expect(timer.getRemainingSeconds()).toEqual(900);
+  });
 });

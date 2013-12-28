@@ -1,4 +1,6 @@
 function PairTimer() {
+  window.pairTimer = this;
+
   this.startTime = 900;
   this.isStarted = false;
   this.clock = $('.clock').FlipClock({
@@ -15,19 +17,27 @@ function PairTimer() {
   this.setStartTime(this.startTime);
 
   this.start = function() {
+    this.clock.setTime(this.startTime -1);
     this.clock.start();
     this.isStarted = true;
   }
+
   this.stop = function() {
     this.clock.stop();
     this.isStarted = false;
   }
+
   this.reset = function() {
-    this.stop();
+    this.clock.stop();
+    this.clock.reset();
     this.setStartTime(this.startTime);
   }
-  this.getRemainingTime =
+
+  this.getRemainingSeconds = function() {
+    return this.clock.getTime().time;
+  }
+
   this.setCallback = function(callbackname, callback) {
-    this.clock.callbacks.callbackname = callback;
+    window.pairTimer.clock.timer.callbacks[callbackname] = callback;
   }
 }
